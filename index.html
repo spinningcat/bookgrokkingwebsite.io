@@ -5,232 +5,215 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
-  box-sizing:border-box;
-  font-size:1.2em;
-}
-html, body{
-  width:100%;
-  height:100%;
-  
-  margin:0;
-  padding:0;
-}
-.container{
-  margin-top:2%;
-  margin-left:5%;
-  margin-right:5%;
+            box-sizing: border-box;
+            font-size: 1.2em;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 2% 5%;
+            padding: 20px;
+        }
+        .head {
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 10px solid gray;
+            border-radius: 20%;
+            background-color: #EDD8D5;
+            text-align: center;
+        }
+        .head .letter {
+            font-size: 30px;
+        }
+        .firstChapter {
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            border: 10px solid rgb(88, 72, 72);
+            padding: 30px;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            background-color: #EDD8D5;
+            margin: 3%;
+            border-radius: 20%;
+        }
+        .firstChapterImages {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .firstChapterImages img {
+            display: inline-block;
+            width: 100%;
+            max-width: 30vmax;
+            object-fit: contain;
+        }
+        .title {
+            border: 10px solid gray;
+            border-radius: 20%;
+            font-weight: bold;
+            padding: 5px;
+            text-align:center;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .next {
+            font-weight: bold;
+            text-align: center;
+        }
+        .logoline {
+            font-size: 70px;
+        }
 
-  padding:20px
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .head, .firstChapter {
+                border-width: 5px;
+                padding: 15px;
+                margin: 5%;
+            }
+            .firstChapterImages img {
+                max-width: 100%;
+            }
+            .head .letter {
+                font-size: 24px;
+            }
+            .logoline {
+                font-size: 50px;
+            }
+        }
 
-}
-.head{
-
-padding:5px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-border-top: 10px solid gray;
-border-bottom: 10px solid gray;
-border-left: 10px solid rgb(88, 72, 72);
-border-right: 10px solid rgb(88, 72, 72);
-  border-radius:20%;
-    background-color:#EDD8D5;
-}
-.head div .letter{
-  font-size:30px;
-}
-.firstChapter{
-    padding:5px;
-  display:flex;
-  flex-direction:column;
-  border-top: 10px solid rgb(88, 72, 72);
-  border-bottom: 10px solid rgb(88, 72, 72);
-  padding:30px;
-  gap:20px;
-  justify-content:center;
-  align-items:center;
-    background-color:#EDD8D5;
-  margin:3%;
-  border-left: 10px solid gray;
-border-right: 10px solid gray;
-  border-radius:20%;
-
-}
-.firstChapterImages{
-  width:100%;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:30px
-
-}
-.firstChapterImages img{
-  display:inline-block;
-  width:30vmax;
-
-  object-fit:contain;
-}
-.title{
-    border-top: 10px solid gray;
-  border-bottom: 10px solid gray;
-  border-radius:20%;
-  font-weight:bold;
-  padding:5px;
-}
-.logo{
-  font-weight:bold;
-  font-size:24px;
-   
-
-}
-.next{
-    font-weight:bold;
-  
-    text-align:center;
-}
-.logoline{
-
-font-size:70px;
-
-
-}
+        @media (max-width: 480px) {
+            .container {
+                margin: 5%;
+                padding: 10px;
+            }
+            .firstChapter {
+                padding: 10px;
+                margin: 5%;
+            }
+            .firstChapterImages {
+                gap: 10px;
+            }
+            .head .letter {
+                font-size: 20px;
+            }
+            .logoline {
+                font-size: 40px;
+            }
+        }
     </style>
-    <title>Document</title>
+    <title>Responsive Document</title>
 </head>
 <body>
     <div class="container">
         <div class="head">
-        <div class> 
-          <span class="letter">B</span>
-          <span class="logoline">|</span>
-          <span class="letter">E</spa> 
-          <span class="logoline">|</span>
-          <span class="letter" >N</span>
-            
-          </div>
-          <div class="logo" >Book Grokking Website</div>
-          <div>
-                  <input type="radio">
-            <labe class="logo"l>TR</labe>
-        <input type="radio">
-             <labe class="logo"l>EN</labe>
-            
-          </div>
-      </div>
+            <div>
+                <span class="letter">B</span>
+                <span class="logoline">|</span>
+                <span class="letter">E</span>
+                <span class="logoline">|</span>
+                <span class="letter">N</span>
+            </div>
+            <div class="logo">Book Grokking Website</div>
+            <div>
+                <input type="radio" name="language"><label class="logo">TR</label>
+                <input type="radio" name="language"><label class="logo">EN</label>
+            </div>
+        </div>
 
         <div class="firstChapter">
-          <div class="title">Cover Page</div>
-          <div class=firstChapterImages>
-               <img src="imgeng1.png">
-          
+            <div class="title">Cover Page</div>
+            <div class="firstChapterImages">
+                <img src="imgeng1.png">
+            </div>
         </div>
-        </div>
+
         <div class="firstChapter">
             <div class="title">Stories and Poems</div>
-            <div class=firstChapterImages>
-              <img src="imgeng24.png">
-              <img src="imgeng25.png">
-              <img src="imgeng26.png">
-              <img src="imgeng27.png">
-            
-              <img src="imgeng28.png">
-              <img src="imgeng29.png">
-           </div>
-            
-          </div>
-          <div class="firstChapter">
-          <div class="title">First Chapter: Photos with Stories</div>
-          <div class=firstChapterImages>
-     
-               <img src="imgeng2.png">
-               <img src="imgeng3.png">
-               <img src="imgeng4.png">
-               <img src="imgeng5.png">
-             
-               <img src="imgeng6.png">
-               <img src="imgeng7.png">
-         
-                   
-            
-         </div>
-          
+            <div class="firstChapterImages">
+                <img src="imgeng24.png">
+                <img src="imgeng25.png">
+                <img src="imgeng26.png">
+                <img src="imgeng27.png">
+                <img src="imgeng28.png">
+                <img src="imgeng29.png">
+            </div>
         </div>
-        
-      
-      
-        <div class="firstChapter">
-          <div class="title">Second Chapter: Photos with Captions</div>
-          <div class=firstChapterImages>
-            <img src="imgeng12.png">
-            <img src="imgeng13.png">
-            <img src="imgeng152.png">
-            <img src="imgeng14.png">
-            <img src="imgeng15.png">
-            <img src="imgeng151.png">
-          
-        
-         </div>
-          
-        </div>
-      
-      
-        <div class="firstChapter">
-          <div class="title">Third Chapter: Experimental Photo Selections</div>
-          <div class=firstChapterImages>
-            <img src="imgeng16.png">
-            <img src="imgeng22.png">
-            <img src="imgeng17.png">
-            <img src="imgeng18.png">
-            <img src="imgeng19.png">
-         
-            <img src="imgeng20.png">
-            <img src="imgeng21.png">
-    
-            <img src="imgeng23.png">
-            
-         </div>
-          
-        </div>
-      
-
-      
-  
-
-   
-        <div class="firstChapter">
-          <div class="title">Future plans</div>
-          <div class=firstChapterImages>
-            <img src="img33.png">
-            <img src="img34.png">
-            
-         </div>
-          
-        </div>
-        <div class="firstChapter">
-            <di class="title"v>Back Page</di>
-            <div class=firstChapterImages>
-           <img src="imgeng30.png">
-   
-           </div>
-            
-          </div>
 
         <div class="firstChapter">
-          <di class="title"v>Second Book - Coming</di>
-          <div class=firstChapterImages>
-         <img src="img31.png">
-               <img src="img32.png">
-              
-         </div>
-         <p class="next">The idea of second book is to nail photos that will be done manually for each photos.</p>
-          
+            <div class="title">First Chapter: Photos with Stories</div>
+            <div class="firstChapterImages">
+                <img src="imgeng2.png">
+                <img src="imgeng3.png">
+                <img src="imgeng4.png">
+                <img src="imgeng5.png">
+                <img src="imgeng6.png">
+                <img src="imgeng7.png">
+            </div>
         </div>
-      
-      </div>
-      
-  
 
+        <div class="firstChapter">
+            <div class="title">Second Chapter: Photos with Captions</div>
+            <div class="firstChapterImages">
+                <img src="imgeng12.png">
+                <img src="imgeng13.png">
+                <img src="imgeng152.png">
+                <img src="imgeng14.png">
+                <img src="imgeng15.png">
+                <img src="imgeng151.png">
+            </div>
+        </div>
 
+        <div class="firstChapter">
+            <div class="title">Third Chapter: Experimental Photo Selections</div>
+            <div class="firstChapterImages">
+                <img src="imgeng16.png">
+                <img src="imgeng22.png">
+                <img src="imgeng17.png">
+                <img src="imgeng18.png">
+                <img src="imgeng19.png">
+                <img src="imgeng20.png">
+                <img src="imgeng21.png">
+                <img src="imgeng23.png">
+            </div>
+        </div>
+
+        <div class="firstChapter">
+            <div class="title">Future plans</div>
+            <div class="firstChapterImages">
+                <img src="img33.png">
+                <img src="img34.png">
+            </div>
+        </div>
+
+        <div class="firstChapter">
+            <div class="title">Back Page</div>
+            <div class="firstChapterImages">
+                <img src="imgeng30.png">
+            </div>
+        </div>
+
+        <div class="firstChapter">
+            <div class="title">Second Book - Coming</div>
+            <div class="firstChapterImages">
+                <img src="img31.png">
+                <img src="img32.png">
+            </div>
+            <p class="next">The idea of second book is to nail photos that will be done manually for each photo.</p>
+        </div>
+    </div>
 </body>
 </html>
