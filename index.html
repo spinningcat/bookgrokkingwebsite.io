@@ -124,10 +124,31 @@
         .hide{
             display:none;
         }
+        .langButtons{
+      
+            padding:20px;
+            display:flex;
+            flex-direction:row;
+            justify-content: flex-end;
+        }
+        .langButtons .langs{
+            display:flex;
+            flex-direction: column;
+            position:fixed;
+            left:85%;
+            top:5%;
+            gap:10px;
+        }
     </style>
     <title>>Book Grokking Website</title>
 </head>
 <body>
+    <div class="langButtons">
+        <div class="langs">
+            <input type="radio" name="language" checked id="tr" data-lang="tr"><label class="logo">TR</label>
+            <input type="radio" name="language" id="en" data-lang="en"><label class="logo">EN</label>
+        </div>
+    </div>
     <div class="containereng hide">
         <div class="head">
             <div>
@@ -138,10 +159,7 @@
                 <span class="letter">N</span>
             </div>
             <div class="logo">Book Grokking Website</div>
-            <div>
-                <input type="radio" name="language" checked class="tr"><label class="logo">TR</label>
-                <input type="radio" name="language" class="eng"><label class="logo">EN</label>
-            </div>
+       
         </div>
 
         <div class="firstChapter">
@@ -152,7 +170,7 @@
         </div>
 
         <div class="firstChapter">
-            <div class="title">Stories and Poems</div>
+            <div class="title">First Chapter: Stories and Poems</div>
             <div class="firstChapterImages">
                 <img src="en/imgeng24.png">
                 <img src="en/imgeng25.png">
@@ -164,7 +182,7 @@
         </div>
 
         <div class="firstChapter">
-            <div class="title">First Chapter: Photos with Stories</div>
+            <div class="title">Second Chapter: Photos with Stories</div>
             <div class="firstChapterImages">
                 <img src="en\imgeng2.png">
                 <img src="en\imgeng3.png">
@@ -176,7 +194,7 @@
         </div>
 
         <div class="firstChapter">
-            <div class="title">Second Chapter: Photos with Captions</div>
+            <div class="title">Third Chapter: Photos with Captions</div>
             <div class="firstChapterImages">
                 <img src="en\imgeng12.png">
                 <img src="en\imgeng13.png">
@@ -188,7 +206,7 @@
         </div>
 
         <div class="firstChapter">
-            <div class="title">Third Chapter: Experimental Photo Selections</div>
+            <div class="title">Fourth Chapter: Experimental Photo Selections</div>
             <div class="firstChapterImages">
                 <img src="en\imgeng16.png">
                 <img src="en\imgeng22.png">
@@ -202,7 +220,7 @@
         </div>
 
         <div class="firstChapter">
-            <div class="title">Future plans</div>
+            <div class="title">Fifth Chapter: Future plans</div>
             <div class="firstChapterImages">
                 <img src="en/img33.png">
                 <img src="en/img34.png">
@@ -235,10 +253,7 @@
                 <span class="letter">N</span>
             </div>
             <div class="logo">Kitap Tanıtım Sitesi</div>
-            <div>
-                <input type="radio" name="language" checked class="tr" data-lang="tr"><label class="logo">TR</label>
-                <input type="radio" name="language" class="en" data-lang="en"><label class="logo">EN</label>
-            </div>
+        
         </div>
 
         <div class="firstChapter">
@@ -324,14 +339,14 @@
     </div>
     <script>
 
-        document.querySelector(".en").addEventListener('change', (event) => {
+        document.querySelector("#en").addEventListener('change', (event) => {
   
             
             document.querySelector('.containertr').classList.add('hide');
             document.querySelector('.containereng').classList.remove('hide');
             
         });
-        document.querySelector(".tr").addEventListener('change', (event) => {
+        document.querySelector("#tr").addEventListener('change', (event) => {
   
             
             document.querySelector('.containertr').classList.remove('hide');
