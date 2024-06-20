@@ -14,7 +14,7 @@
             margin: 0;
             padding: 0;
         }
-        .container {
+        .containereng, .containertr {
             margin: 2% 5%;
             padding: 20px;
         }
@@ -91,7 +91,7 @@
                 margin: 5%;
             }
             .firstChapterImages img {
-                max-width: 100%;
+                width:200%;
             }
             .head .letter {
                 font-size: 24px;
@@ -102,7 +102,7 @@
         }
 
         @media (max-width: 480px) {
-            .container {
+            .containereng, .containertr {
                 margin: 5%;
                 padding: 10px;
             }
@@ -119,12 +119,16 @@
             .logoline {
                 font-size: 40px;
             }
+        
+        }
+        .hide{
+            display:none;
         }
     </style>
-    <title>Responsive Document</title>
+    <title>>Book Grokking Website</title>
 </head>
 <body>
-    <div class="container">
+    <div class="containereng hide">
         <div class="head">
             <div>
                 <span class="letter">B</span>
@@ -135,8 +139,8 @@
             </div>
             <div class="logo">Book Grokking Website</div>
             <div>
-                <input type="radio" name="language" checked><label class="logo">TR</label>
-                <input type="radio" name="language"><label class="logo">EN</label>
+                <input type="radio" name="language" checked class="tr"><label class="logo">TR</label>
+                <input type="radio" name="language" class="eng"><label class="logo">EN</label>
             </div>
         </div>
 
@@ -221,5 +225,120 @@
             <p class="next">The idea of second book is to nail photos that will be done manually for each photo.</p>
         </div>
     </div>
+    <div class="containertr">
+        <div class="head">
+            <div>
+                <span class="letter">B</span>
+                <span class="logoline">|</span>
+                <span class="letter">E</span>
+                <span class="logoline">|</span>
+                <span class="letter">N</span>
+            </div>
+            <div class="logo">Kitap Tanıtım Sitesi</div>
+            <div>
+                <input type="radio" name="language" checked class="tr" data-lang="tr"><label class="logo">TR</label>
+                <input type="radio" name="language" class="en" data-lang="en"><label class="logo">EN</label>
+            </div>
+        </div>
+
+        <div class="firstChapter">
+            <div class="title">Ön Kapak</div>
+            <div class="firstChapterImages">
+                <img src="tr/imgtr8.png">
+            </div>
+        </div>
+
+        <div class="firstChapter">
+            <div class="title">Birinci Kısım: Hikayeler ve Şiirler</div>
+            <div class="firstChapterImages">
+                <img src="tr/imgtr2.png">
+                <img src="tr/imgtr3.png">
+                <img src="tr/imgtr4.png">
+                <img src="tr/imgtr5.png">
+                <img src="tr/imgtr6.png">
+                <img src="tr/imgtr7.png">
+            </div>
+        </div>
+
+        <div class="firstChapter">
+            <div class="title">İkinci Kısım: Fotoğraflar ve Hikayeler</div>
+            <div class="firstChapterImages">
+                <img src="tr\imgtr9,.png">
+                <img src="tr\imgtr10.png">
+                <img src="tr\imgtr11.png">
+                <img src="tr\imgtr12.png">
+                <img src="tr\imgtr13.png">
+                <img src="tr\imgtr14.png">
+            </div>
+        </div>
+
+        <div class="firstChapter">
+            <div class="title">Üçüncü Kısım: Fotoğraflar ve Kısa Yazılar </div>
+            <div class="firstChapterImages">
+                <img src="tr\imgtr15.png">
+                <img src="tr\imgtr16.png">
+                <img src="tr\imgtr17.png">
+                <img src="tr\imgtr18.png">
+                <img src="tr\imgtr19.png">
+                <img src="tr\imgtr20.png">
+            </div>
+        </div>
+
+        <div class="firstChapter">
+            <div class="title">Dördüncü Kısım: Deneysel Fotoğraflar</div>
+            <div class="firstChapterImages">
+                <img src="en\imgeng16.png">
+                <img src="tr\imgtr22.png">
+                <img src="en\imgeng17.png">
+                <img src="en\imgeng18.png">
+                <img src="tr\imgtr21.png">
+                <img src="en\imgeng20.png">
+                <img src="en\imgeng21.png">
+                <img src="en\imgeng23.png">
+            </div>
+        </div>
+
+        <div class="firstChapter">
+            <div class="title">Beşinci Kısım: Gelecek Planları</div>
+            <div class="firstChapterImages">
+                <img src="tr/imgtr23.png">
+                <img src="tr/imgtr24.png">
+            </div>
+        </div>
+
+        <div class="firstChapter">
+            <div class="title">Arka Sayfa</div>
+            <div class="firstChapterImages">
+                <img src="tr\imgtr1.png">
+            </div>
+        </div>
+
+        <div class="firstChapter">
+            <div class="title">İkinci kitap - Yakında</div>
+            <div class="firstChapterImages">
+                <img src="img31.png">
+                <img src="img32.png">
+            </div>
+            <p class="next">İkinci kitabım çerçevelenmiş resimlerden oluşacak..</p>
+        </div>
+    </div>
+    <script>
+
+        document.querySelector(".en").addEventListener('change', (event) => {
+  
+            
+            document.querySelector('.containertr').classList.add('hide');
+            document.querySelector('.containereng').classList.remove('hide');
+            
+        });
+        document.querySelector(".tr").addEventListener('change', (event) => {
+  
+            
+            document.querySelector('.containertr').classList.remove('hide');
+            document.querySelector('.containereng').classList.add('hide');
+            
+        });
+
+    </script>
 </body>
 </html>
